@@ -19,7 +19,7 @@
         '<div class="days" ng-repeat="week in weeks">'+
           '<div class="day"'+
             'ng-repeat="day in week track by $index"'+
-            'ng-class="{selected: isDefaultDate(day), event: day.event[0], disabled: day.disabled, out: !day}"'+
+            'ng-class="{selected: isDefaultDate(day) && !day.disabled, event: day.event[0], disabled: day.disabled, out: !day}"'+
             'ng-click="onClick(day, $index, $event)"'+
           '>'+
             '<div class="number">{{day.day}}</div>'+
